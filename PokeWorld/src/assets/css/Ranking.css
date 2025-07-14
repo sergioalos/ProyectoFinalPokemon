@@ -1,0 +1,92 @@
+body {
+  background: linear-gradient(120deg, #e3f0ff 0%, #fffde7 100%);
+}
+
+.ranking-container {
+  max-width: 600px;
+  margin: 3rem auto 0 auto;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 6px 24px rgba(25, 118, 210, 0.10);
+  padding: 2.2rem 2rem 2rem 2rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ranking-container h2 {
+  color: #1976d2;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.ranking-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #f5f8fd;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(25, 118, 210, 0.07);
+}
+
+.ranking-table thead tr {
+  background: linear-gradient(90deg, #1976d2 60%, #ffd600 100%);
+}
+
+.ranking-table th {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 0.9rem 0.5rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #1976d2;
+}
+
+.ranking-table tbody tr {
+  transition: background 0.18s;
+}
+
+.ranking-table tbody tr:nth-child(odd) {
+  background: #e3f0ff;
+}
+
+.ranking-table tbody tr:nth-child(even) {
+  background: #fff9c4;
+}
+
+.ranking-table td {
+  padding: 0.7rem 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #1976d2;
+  font-weight: 700;
+}
+
+.ranking-table tbody tr:first-child td {
+  background: #ffd600;
+  color: #1976d2;
+  font-size: 1.1rem;
+  font-weight: 900;
+  border-top: 2px solid #ffd600;
+}
+
+.ranking-table tbody tr:hover {
+  background: #b3e5fc;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .ranking-container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .ranking-table th, .ranking-table td {
+    padding: 0.5rem 0.2rem;
+    font-size: 0.97rem;
+  }
+}

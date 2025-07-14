@@ -1,0 +1,162 @@
+:root {
+  --color-primary: #1976d2;
+  --color-secondary: #e53935;
+  --color-accent: #ffd600;
+  --color-bg: #e3f0ff;
+  --color-bg-gradient: linear-gradient(120deg, #e3f0ff 0%, #fffde7 100%);
+  --color-card: #fff;
+  --color-text: #212121;
+  --color-text-secondary: #5a5a5a;
+}
+
+body {
+  background: var(--color-bg-gradient);
+}
+
+.teams-container {
+  max-width: 420px;
+  margin: 3.5rem auto 0 auto;
+  background: var(--color-card);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.teams-container h2 {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.create-team {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.create-team input[type="text"] {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 16px;
+  border: 2px solid var(--color-primary);
+  font-size: 1rem;
+  outline: none;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: border 0.2s;
+}
+
+.create-team input[type="text"]:focus {
+  border-color: var(--color-secondary);
+}
+
+.create-team button {
+  background: linear-gradient(90deg, var(--color-primary) 60%, var(--color-accent) 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 16px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+
+.create-team button:hover {
+  background: linear-gradient(90deg, var(--color-secondary) 60%, var(--color-accent) 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.teams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.team-card {
+  background: linear-gradient(90deg, #f5f8fd 80%, #fff9c4 100%);
+  border-radius: 14px;
+  box-shadow: 0 1px 6px rgba(25, 118, 210, 0.07);
+  padding: 0.7rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border: 1.5px solid var(--color-primary);
+  transition: box-shadow 0.18s, border 0.18s, transform 0.18s;
+  position: relative;
+}
+
+.team-card:hover {
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.13);
+  border-color: var(--color-secondary);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.team-name {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+  flex: 1;
+  text-align: left;
+  padding-right: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.delete-button {
+  background: #fff;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.7rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s, transform 0.15s;
+  outline: none;
+}
+
+.delete-button:hover {
+  background: var(--color-secondary);
+  color: #fff;
+  border-color: var(--color-secondary);
+  transform: scale(1.08);
+}
+
+.error {
+  color: var(--color-secondary);
+  text-align: center;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .teams-container {
+    padding: 0.7rem 0.2rem;
+    max-width: 98vw;
+    gap: 0.7rem;
+  }
+  .create-team {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .team-card {
+    padding: 0.6rem 0.5rem;
+  }
+}

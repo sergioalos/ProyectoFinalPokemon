@@ -1,0 +1,148 @@
+/* Login.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: 
+    linear-gradient(120deg, #e3f0ff 0%, #fffde7 100%),
+    url('../img/pokeball-bg.png') no-repeat center center fixed;
+  background-size: cover, contain;
+}
+#root > div{
+
+  height: 100vh;
+}
+.login-container {
+  max-width: 370px;
+  margin: 5rem auto 0 auto;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 6px 24px rgba(25, 118, 210, 0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-container h2 {
+  color: #1976d2;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-form input {
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
+  border: 2px solid #1976d2;
+  font-size: 1.1rem;
+  outline: none;
+  background: #f5f8fd;
+  color: #212121;
+  transition: border 0.2s, box-shadow 0.18s;
+}
+
+.login-form input:focus {
+  border-color: #ffd600;
+  box-shadow: 0 0 0 2px #ffd60055;
+}
+
+.login-error {
+  color: #e53935;
+  background: #ffeaea;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.login-success {
+  color: #217c43;
+  background: #e8ffd8;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  animation: win-pop 0.7s;
+}
+
+.login-form button {
+  background: linear-gradient(90deg, #1976d2 60%, #ffd600 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 18px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+
+.login-form button:hover {
+  background: linear-gradient(90deg, #e53935 60%, #ffd600 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.login-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.13);
+  animation: avatar-pop 1s cubic-bezier(.68,-0.55,.27,1.55);
+  background: #fff9c4;
+  border: 3px solid #ffd600;
+  object-fit: cover;
+}
+
+@keyframes avatar-pop {
+  0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+  60% { transform: scale(1.15) rotate(5deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.login-container {
+  animation: login-fade-in 0.8s;
+}
+
+@keyframes login-fade-in {
+  0% { opacity: 0; transform: translateY(-40px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+.login-form input, .login-form button {
+  animation: input-fade-in 0.7s;
+}
+
+@keyframes input-fade-in {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+.login-form button:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 500px) {
+  .login-container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .login-form input, .login-form button {
+    font-size: 1rem;
+    padding: 0.7rem 0.7rem;
+  }
+}

@@ -1,0 +1,195 @@
+body {
+  background: linear-gradient(120deg, #e3f0ff 0%, #fffde7 100%);
+}
+
+.battle-progress-container {
+  max-width: 900px;
+  margin: 2.5rem auto 0 auto;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 6px 24px rgba(25, 118, 210, 0.10);
+  padding: 2.2rem 2rem 2rem 2rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.battle-progress-title {
+  color: #1976d2;
+  font-size: 2.1rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.battle-pokemons-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.battle-pokemon-card {
+  background: linear-gradient(135deg, #f5f8fd 80%, #fff9c4 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+  padding: 1.2rem 1rem 1rem 1rem;
+  min-width: 180px;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #1976d2;
+  position: relative;
+}
+
+.battle-pokemon-label {
+  font-weight: 700;
+  color: #e53935;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.battle-pokemon-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 0.7rem;
+  background: #e3f2fd;
+  border-radius: 16px;
+  border: 3px solid #ffd600;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+
+.battle-pokemon-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1976d2;
+  margin-top: 0.3rem;
+  text-align: center;
+}
+
+.battle-status {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #217c43;
+  font-size: 1.1rem;
+}
+
+.battle-status.error {
+  color: #e53935;
+}
+
+.battle-next-btn {
+  background: linear-gradient(90deg, #e53935 60%, #ffd600 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 18px;
+  padding: 0.8rem 2.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  margin-top: 1.2rem;
+}
+
+.battle-next-btn:disabled {
+  background: #bdbdbd;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.battle-history-section {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.battle-history-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1976d2;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.battle-history-list {
+  max-width: 600px;
+  width: 100%;
+  background: #f5f8fd;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 1px 6px rgba(25, 118, 210, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los items dentro del historial */
+}
+
+.battle-history-item {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* Animaciones para ganar y perder */
+@keyframes win-pop {
+  0% { transform: scale(1) rotate(0deg);}
+  30% { transform: scale(1.15) rotate(-3deg);}
+  60% { transform: scale(0.95) rotate(2deg);}
+  100% { transform: scale(1) rotate(0deg);}
+}
+
+@keyframes lose-shake {
+  0% { transform: translateX(0);}
+  20% { transform: translateX(-8px);}
+  40% { transform: translateX(8px);}
+  60% { transform: translateX(-6px);}
+  80% { transform: translateX(6px);}
+  100% { transform: translateX(0);}
+}
+
+.battle-history-item.win {
+  background: #e8ffd8;
+  border-radius: 8px;
+  color: #217c43;
+  font-weight: bold;
+}
+
+.battle-history-item.lose {
+  background: #ffeaea;
+  border-radius: 8px;
+  color: #e53935;
+  font-weight: bold;
+}
+
+.battle-history-item.animate-win {
+  animation: win-pop 0.7s;
+}
+
+.battle-history-item.animate-lose {
+  animation: lose-shake 0.7s;
+}
+
+@media (max-width: 900px) {
+  .battle-progress-container {
+    max-width: 99vw;
+    padding: 1.2rem 0.2rem;
+  }
+  .battle-pokemons-row {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .battle-pokemon-card {
+    min-width: 60vw;
+    max-width: 90vw;
+    padding: 0.7rem 0.3rem;
+  }
+}

@@ -1,0 +1,145 @@
+.home-container {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fcfbe3;
+  min-height: 100vh;
+}
+
+.poke-title {
+  color: #d62828;
+}
+
+.home-description {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.home-links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.home-button {
+  background-color: #0077cc;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #005fa3;
+}
+
+.home-bg {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #6ec6f7 0%, #b3e0fc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png') repeat top center;
+  opacity: 0.12;
+  z-index: 0;
+}
+
+.home-card {
+  background: rgba(255,255,255,0.92);
+  border-radius: 32px;
+  padding: 56px 36px 48px 36px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10), 0 1.5px 8px rgba(30,144,255,0.08);
+  text-align: center;
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.home-title {
+  font-size: 3.2rem;
+  color: #1976d2;
+  font-weight: 900;
+  margin-bottom: 18px;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 8px rgba(30,144,255,0.08);
+}
+
+.home-description {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 36px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.home-main-button {
+  background: linear-gradient(90deg, #e53935 0%, #ff7043 100%);
+  color: #fff;
+  font-size: 1.35rem;
+  padding: 18px 48px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(229,57,53,0.13);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  display: inline-block;
+  margin-top: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.home-main-button:hover,
+.home-main-button:focus {
+  background: linear-gradient(90deg, #b71c1c 0%, #ff7043 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(229,57,53,0.18);
+}
+
+.home-logo {
+  width: 120px;
+  margin-bottom: 18px;
+  margin-top: -12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(0 2px 8px rgba(30,144,255,0.10));
+}
+
+@media (max-width: 600px) {
+  .home-card {
+    padding: 32px 12px 28px 12px;
+    max-width: 98vw;
+  }
+  .home-title {
+    font-size: 2.1rem;
+  }
+  .home-description {
+    font-size: 1.05rem;
+  }
+  .home-main-button {
+    font-size: 1.1rem;
+    padding: 14px 24px;
+  }
+}

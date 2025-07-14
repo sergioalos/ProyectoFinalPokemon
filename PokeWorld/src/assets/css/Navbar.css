@@ -1,0 +1,99 @@
+:root {
+  --color-primary: #1976d2;
+  --color-secondary: #e53935;
+  --color-accent: #ffd600;
+  --color-bg: #f5f8fd;
+  --color-card: #fff;
+  --color-text: #212121;
+  --color-text-secondary: #5a5a5a;
+}
+
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #1976d2 70%, #ffd600 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 2rem;
+  min-height: 48px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #e3f0ff;
+}
+
+.navbar-logo {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ffd600;
+  letter-spacing: -1px;
+  text-shadow: 1px 1px 0 #1976d2, 2px 2px 0 #fff;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.navbar-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.18s;
+}
+
+.navbar-link:hover {
+  color: #ffd600;
+}
+
+.navbar-btn {
+  padding: 0.4rem 1.1rem;
+  border-radius: 18px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  margin-left: 0.3rem;
+  transition: background 0.18s, color 0.18s, transform 0.13s;
+  box-shadow: 0 1px 6px rgba(25, 118, 210, 0.07);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.navbar-btn.login {
+  background: #fff;
+  color: #1976d2;
+}
+
+.navbar-btn.login:hover {
+  background: #e3f0ff;
+  color: #1976d2;
+  transform: scale(1.05);
+}
+
+.navbar-btn.register {
+  background: #e53935;
+  color: #fff;
+}
+
+.navbar-btn.register:hover {
+  background: #ffd600;
+  color: #e53935;
+  transform: scale(1.05);
+}
+
+@media (max-width: 800px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links-new {
+    gap: 12px;
+  }
+  .navbar-logo-new {
+    font-size: 1.1rem;
+  }
+}
