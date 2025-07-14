@@ -249,7 +249,8 @@ Interfaz web profesional construida con React y Vite para interactuar con la API
 1. Clona el repositorio y accede a la carpeta del frontend:
 
 ```bash
-git clone https://github.com/sergioalos/pokemonFrontFinal.git
+si no lo has instalado aun 
+git clone https://github.com/sergioalos/ProyectoFinalPokemon.git
 cd PokeWorld
 ```
 
